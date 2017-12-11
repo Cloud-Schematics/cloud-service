@@ -13,6 +13,7 @@ variable "space" {
   description                 = "Your Bluemix Space"
 }
 
+variable "servicename" {
 /*
 "options": [
   {
@@ -673,7 +674,6 @@ variable "space" {
   }
 ]
 */
-variable "servicename" {
   type                        = "string"
   description                 = "Specify the service name you want to create"
 }
