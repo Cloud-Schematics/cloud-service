@@ -14,19 +14,19 @@ Environments can be used to separate software components into development tiers 
 2. In the left navigation menu, select **Templates** to access the template catalog.
 3. Click **Create** on the `cloud-service` template. You are taken to a configuration page where you can define metadata about your environment.
 4. In the **Variables** section:
-  a. Set the value of `servicename` to the service type you want to create. The list of available services can be found by running `bx cf marketplace`.
-  b. Set the value of `plan` to the service plan for the service you want to create. Note that plans are often unique for a service so you need to lookup the plan by running `bx cf marketplace -s <servicename>`.
+  a. Set the value of `servicename` to the service type you want to create. You can run `bx cf marketplace` in the IBM Cloud CLI for a list of available services.
+  b. Set the value of `plan` to the service plan for the service you want to create. Service plans are often unique for a service, so you can run `bx cf marketplace -s <servicename>` to look up the plan.
 5. Define values for your [variables](#variables).
 6. This template generates a service key, which you need to access your new service. This key is generated and you can see it in your service details on your dashboard on https://console.bluemix.net/dashboard/apps.
 ## Variables
 
 |Variable Name|Description|Default Value|
 |-------------|-----------|-------------|
-|ibm_bmx_api_key|Your IBM Cloud API key.| |
+|ibm_bmx_api_key|Your IBM Cloud API key. You can run `bx iam api-key-create <key name>` to create a key.| |
 |org|Your IBM Cloud organization.||
-|space|Your IBM Cloud organization.||
+|space|Your IBM Cloud space.||
 |servicename|The name of the service type, see `bx cf marketplace`.||
-|plan|The plan for the service you want to create.||
+|plan|The plan for the service that you want to create.||
 
 ## Next steps
 
